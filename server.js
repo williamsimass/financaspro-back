@@ -12,7 +12,7 @@ const jwtSecret = process.env.JWT_SECRET;
 // Middleware att
 app.use(express.json()); // Coloque esta linha PRIMEIRO
 app.use(cors({ // Coloque a configuração do cors DEPOIS
-  origin: ["https://williamsimass.github.io", "http://localhost:5000"],
+  origin: ["https://williamsimass.github.io/financaspro", "http://localhost:5000"],
   methods: ["GET", "POST", "DELETE", "PUT", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
 } ));
