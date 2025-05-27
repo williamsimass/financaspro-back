@@ -10,13 +10,13 @@ const port = process.env.PORT || 3000;
 const jwtSecret = process.env.JWT_SECRET;
 
 // Middleware att
-app.use(cors({ // Coloque a configuração do cors DEPOIS
-  origin: ["https://williamsimass.github.io/financaspro/login.html", "http://localhost:5000"],
+// Ordem Padrão Recomendada:
+app.use(cors({ 
+  origin: ["https://williamsimass.github.io/financaspro", "http://localhost:5000"],
   methods: ["GET", "POST", "DELETE", "PUT", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
 } ));
-app.use(express.json()); // Coloque esta linha PRIMEIRO
-
+app.use(express.json()); // DEPOIS do cors
 
 // Conexão com MongoDB
 const uri = process.env.MONGODB_URI;
