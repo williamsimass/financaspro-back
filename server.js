@@ -9,7 +9,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 const jwtSecret = process.env.JWT_SECRET;
 
-// Middleware
+// Middleware att
 app.use(cors({
   origin: ["https://williamsimass.github.io", "http://localhost:5000"], // Mantenha localhost se precisar testar localmente
   methods: ["GET", "POST", "DELETE", "PUT", "OPTIONS"],
